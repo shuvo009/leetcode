@@ -30,5 +30,22 @@ namespace leetcode.learn.FunWithArrays
 
             return Math.Max(globalMax, localMax);
         }
+
+        //Given an array nums of integers, return how many of them contain an even number of digits.
+
+        public int FindNumbersWithEvenNumberOfDigits(int[] nums)
+        {
+            var evenDigiteCount = 0;
+
+            for (int i = 0; i < nums.Length; i++)
+            {
+                var digiteCount = nums[i].ToString().ToCharArray().Length;
+                if (digiteCount % 2 == 0)
+                    evenDigiteCount++;
+            }
+
+            return evenDigiteCount;
+        }
+
     }
 }

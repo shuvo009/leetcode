@@ -25,5 +25,22 @@ namespace leetcode.learn.FunWithArrays
             Assert.Equal(6, maxConsecutive);
 
         }
+        
+        
+        [Fact]
+        public void Find_Numbers_With_Even_Number_Of_Digits_Test()
+        {
+            var introduction = new Introduction();
+
+            var evenDigitsCount = introduction.FindNumbersWithEvenNumberOfDigits(new int[] { 12, 345, 2, 6, 7896 });
+            Assert.Equal(2, evenDigitsCount);
+            
+            evenDigitsCount = introduction.FindNumbersWithEvenNumberOfDigits(new int[] { 555, 901, 482, 1771 });
+            Assert.Equal(1, evenDigitsCount);
+            
+            evenDigitsCount = introduction.FindNumbersWithEvenNumberOfDigits(new int[] { 555, 901, 482, 14771 });
+            Assert.Equal(0, evenDigitsCount);
+
+        }
     }
 }
