@@ -40,6 +40,20 @@ namespace leetcode.learn.FunWithArrays
             
             evenDigitsCount = introduction.FindNumbersWithEvenNumberOfDigits(new int[] { 555, 901, 482, 14771 });
             Assert.Equal(0, evenDigitsCount);
+        }
+        
+
+        [Fact]
+        public void Squares_Of_A_Sorted_Array_Test()
+        {
+            var introduction = new Introduction();
+
+            var sortedArray = introduction.SquaresOfASortedArray(new int[] { -4, -1, 0, 3, 10 });
+            Assert.Equal(new int[] { 0, 1, 9, 16, 100 }, sortedArray);
+            
+            sortedArray = introduction.SquaresOfASortedArray(new int[] { -7, -3, 2, 3, 11 });
+            Assert.Equal(new int[] { 4, 9, 9, 49, 121 }, sortedArray);
+           
 
         }
     }
