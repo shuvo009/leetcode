@@ -27,5 +27,17 @@ namespace leetcode.learn.FunWithArrays
             Assert.Equal(new int[] { 0, 0, 0, 0, 0, 0, 0 }, testInputThree);
 
         }
+
+        [Fact]
+        public void Merge_Sorted_Array_Test()
+        {
+            var insertingItemsIntoAnArray = new InsertingItemsIntoAnArray();
+
+
+            var test1_num1 = new int[] { 1, 2, 3, 0, 0, 0 };
+            var test1_num2 = new int[] { 2, 5, 6 };
+            insertingItemsIntoAnArray.MergeSortedArray(test1_num1, 3, test1_num2, 3);
+            Assert.Equal(new int[] { 1, 2, 2, 3, 5, 6 }, test1_num1);
+        }
     }
 }

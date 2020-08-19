@@ -1,23 +1,34 @@
-﻿namespace leetcode.learn.FunWithArrays
+﻿using System;
+using System.Linq;
+
+namespace leetcode.learn.FunWithArrays
 {
     public class InsertingItemsIntoAnArray
     {
         public void DuplicateZeros(int[] arr)
         {
-            int curentIndex = 0;
-            while (curentIndex < arr.Length)
+            int currentIndex = 0;
+            while (currentIndex < arr.Length)
             {
-                if (arr[curentIndex] == 0)
+                if (arr[currentIndex] == 0)
                 {
-                    for (int i = arr.Length - 2; i > curentIndex; i--)
+                    for (int i = arr.Length - 2; i > currentIndex; i--)
                         arr[i + 1] = arr[i];
 
-                    if (++curentIndex <= arr.Length - 1)
-                        arr[curentIndex] = 0;
+                    if (++currentIndex <= arr.Length - 1)
+                        arr[currentIndex] = 0;
                 }
 
-                curentIndex++;
+                currentIndex++;
             }
+        }
+
+        public void MergeSortedArray(int[] nums1, int m, int[] nums2, int n)
+        {
+            for (int i = 0; i < n; i++)
+                nums1[m + i] = nums2[i];
+
+            Array.Sort(nums1);
         }
     }
 }
