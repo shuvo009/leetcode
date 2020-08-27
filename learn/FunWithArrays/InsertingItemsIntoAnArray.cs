@@ -5,6 +5,7 @@ namespace leetcode.learn.FunWithArrays
 {
     public class InsertingItemsIntoAnArray
     {
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3245/
         public void DuplicateZeros(int[] arr)
         {
             int currentIndex = 0;
@@ -23,6 +24,7 @@ namespace leetcode.learn.FunWithArrays
             }
         }
 
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3253/
         public void MergeSortedArray(int[] nums1, int m, int[] nums2, int n)
         {
             for (int i = 0; i < n; i++)

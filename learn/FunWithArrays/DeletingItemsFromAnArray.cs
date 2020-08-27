@@ -4,6 +4,7 @@ namespace leetcode.learn.FunWithArrays
 {
     public class DeletingItemsFromAnArray
     {
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3247/
         public int RemoveElement(int[] nums, int val)
         {
             var length = nums.Length;
@@ -29,6 +30,7 @@ namespace leetcode.learn.FunWithArrays
             return length;
         }
 
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/526/deleting-items-from-an-array/3248/
         public int RemoveDuplicates(int[] nums)
         {
             var length = nums.Length;

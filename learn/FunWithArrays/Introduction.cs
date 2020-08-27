@@ -10,6 +10,7 @@ namespace leetcode.learn.FunWithArrays
         //Output: 3
         //Explanation: The first two digits or the last three digits are consecutive 1s. The maximum number of consecutive 1s is 3.
 
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3238/
         public int FindMaxConsecutiveOnes(int[] nums)
         {
             var globalMax = 0;
@@ -32,7 +33,7 @@ namespace leetcode.learn.FunWithArrays
         }
 
         //Given an array nums of integers, return how many of them contain an even number of digits.
-
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3237/
         public int FindNumbersWithEvenNumberOfDigits(int[] nums)
         {
             var evenDigiteCount = 0;
@@ -47,7 +48,7 @@ namespace leetcode.learn.FunWithArrays
             return evenDigiteCount;
         }
 
-
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/521/introduction/3240/
         //Given an array of integers A sorted in non-decreasing order, return an array of the squares of each number, also in sorted non-decreasing order.
         public int[] SquaresOfASortedArray(int[] A)
         {

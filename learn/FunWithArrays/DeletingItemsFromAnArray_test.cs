@@ -39,13 +39,13 @@ namespace leetcode.learn.FunWithArrays
         {
             var deletingItemsFromAnArray = new DeletingItemsFromAnArray();
 
-            // var inputOne = new int[] { 1, 1, 2 };
-            // var length = deletingItemsFromAnArray.RemoveDuplicates(inputOne);
-            // Assert.Equal(2, length);
-            // Assert.Equal(inputOne, new int[] { 1, 2, 0 });
+            var inputOne = new int[] { 1, 1, 2 };
+            var length = deletingItemsFromAnArray.RemoveDuplicates(inputOne);
+            Assert.Equal(2, length);
+            Assert.Equal(inputOne, new int[] { 1, 2, 0 });
 
             var inputTwo = new int[] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
-            var length = deletingItemsFromAnArray.RemoveDuplicates(inputTwo);
+            length = deletingItemsFromAnArray.RemoveDuplicates(inputTwo);
             Assert.Equal(5, length);
             Assert.Equal(inputTwo, new int[] { 0, 1, 2, 3, 4, 0, 0, 0, 0, 0 });
         }
