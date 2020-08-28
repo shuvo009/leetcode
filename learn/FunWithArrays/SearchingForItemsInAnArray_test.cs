@@ -27,5 +27,25 @@ namespace leetcode.learn.FunWithArrays
             exist = searchingForItemsInAnArray.CheckIfNAndItsDoubleExist(new int[] { 0, 0 });
             Assert.True(exist);
         }
+
+        [Fact]
+        public void Valid_Mountain_Array()
+        {
+            var searchingForItemsInAnArray = new SearchingForItemsInAnArray();
+            var isValid = searchingForItemsInAnArray.ValidMountainArray(new int[] {0, 3, 2, 1});
+            Assert.True(isValid);
+            
+            isValid = searchingForItemsInAnArray.ValidMountainArray(new int[] { 3, 5, 5 });
+            Assert.False(isValid);
+            
+            isValid = searchingForItemsInAnArray.ValidMountainArray(new int[] { 2, 1 });
+            Assert.False(isValid);
+            
+            isValid = searchingForItemsInAnArray.ValidMountainArray(new int[] { 1, 2 });
+            Assert.False(isValid);
+            
+            isValid = searchingForItemsInAnArray.ValidMountainArray(new int[] { 1, 1 });
+            Assert.False(isValid);
+        }
     }
 }

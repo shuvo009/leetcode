@@ -23,5 +23,28 @@ namespace leetcode.learn.FunWithArrays
 
             return false;
         }
+
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/527/searching-for-items-in-an-array/3251/
+        public bool ValidMountainArray(int[] A)
+        {
+            var isDownhillStarted = false;
+            var isUphillStarted = false;
+            for (int i = 0; i < A.Length - 1; i++)
+            {
+                if (A[i] > A[i + 1])
+                {
+                    isDownhillStarted = true;
+                }
+                else
+                {
+                    isUphillStarted = true;
+                    if (isDownhillStarted)
+                        return false;
+                }
+            }
+
+            return isUphillStarted && isDownhillStarted;
+        }
+
     }
 }
