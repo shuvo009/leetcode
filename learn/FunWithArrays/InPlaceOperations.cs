@@ -24,5 +24,23 @@ namespace leetcode.learn.FunWithArrays
             arr[arr.Length - 1] = -1;
             return arr;
         }
+
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3157/
+        public void MoveZeroes(int[] A)
+        {
+            var writeIndex = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] != 0)
+                    A[writeIndex++] = A[i];
+            }
+
+            while (writeIndex < A.Length)
+            {
+                A[writeIndex++] = 0;
+            }
+        }
+
+
     }
 }
