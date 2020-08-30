@@ -45,5 +45,35 @@ namespace leetcode.learn.FunWithArrays
             Assert.Equal(new int[] { 1, 1, 0 }, testInputSix);
 
         }
+
+
+        [Fact]
+        public void Sort_Array_By_Parity()
+        {
+            var itemsIntoAnArray = new InPlaceOperations();
+
+            var testInputOne = new int[] { 3, 1, 2, 4 };
+            var output = itemsIntoAnArray.SortArrayByParity(testInputOne);
+            Assert.Equal(new int[] { 2, 4, 3, 1 }, output);
+
+            var testInputTwo = new int[] { 3, 1, 3, 7 };
+            output = itemsIntoAnArray.SortArrayByParity(testInputTwo);
+            Assert.Equal(new int[] { 3, 1, 3, 7 }, output);
+
+            var testInputThree = new int[] { 2, 4, 8, 6 };
+            output = itemsIntoAnArray.SortArrayByParity(testInputThree);
+            Assert.Equal(new int[] { 2, 4, 8, 6 }, output);
+
+            var testInputFour = new int[] { 2 };
+            output = itemsIntoAnArray.SortArrayByParity(testInputFour);
+            Assert.Equal(new int[] { 2 }, output);
+            
+            var testInputFive = new int[] { 7 };
+            output = itemsIntoAnArray.SortArrayByParity(testInputFive);
+            Assert.Equal(new int[] { 7 }, output);
+
+
+
+        }
     }
 }

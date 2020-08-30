@@ -41,6 +41,26 @@ namespace leetcode.learn.FunWithArrays
             }
         }
 
+        //https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3260/
+        public int[] SortArrayByParity(int[] A)
+        {
+            var oddArray = new int[A.Length];
+            var evenIndex = 0;
+            var oddIndex = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i] % 2 == 0)
+                    A[evenIndex++] = A[i];
+                else
+                    oddArray[oddIndex++] = A[i];
+            }
 
+            for (int i = 0; i < oddIndex; i++)
+            {
+                A[evenIndex++] = oddArray[i];
+            }
+
+            return A;
+        }
     }
 }
