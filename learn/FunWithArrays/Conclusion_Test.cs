@@ -14,16 +14,16 @@ namespace leetcode.learn.FunWithArrays
 
             var chageCount = conclusion.HeightChecker(new int[] { 1, 1, 4, 2, 1, 3 });
             Assert.Equal(3, chageCount);
-            
+
             chageCount = conclusion.HeightChecker(new int[] { 5, 1, 2, 3, 4 });
             Assert.Equal(5, chageCount);
-            
+
             chageCount = conclusion.HeightChecker(new int[] { 1, 2, 3, 4, 5 });
             Assert.Equal(0, chageCount);
 
         }
-        
-        
+
+
         [Fact]
         public void Third_Maximum_Number()
         {
@@ -31,18 +31,38 @@ namespace leetcode.learn.FunWithArrays
 
             var result = conclusion.ThirdMax(new int[] { 3, 2, 1 });
             Assert.Equal(1, result);
-            
+
             result = conclusion.ThirdMax(new int[] { 1, 2 });
             Assert.Equal(2, result);
-            
+
             result = conclusion.ThirdMax(new int[] { 2, 2, 3, 1 });
             Assert.Equal(1, result);
 
             result = conclusion.ThirdMax(new int[] { 5 });
             Assert.Equal(5, result);
-            
+
             result = conclusion.ThirdMax(new int[] { 1, 1, 2 });
             Assert.Equal(2, result);
+
+        }
+
+
+        [Fact]
+        public void Find_Disappeared_Numbers()
+        {
+            var conclusion = new Conclusion();
+
+            var result = conclusion.FindDisappearedNumbers(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 });
+            Assert.Equal(new List<int> { 5, 6 }, result);
+
+            result = conclusion.FindDisappearedNumbers(new int[] { 1, 2, 3, 4 });
+            Assert.Equal(new List<int> { }, result);
+            
+            result = conclusion.FindDisappearedNumbers(new int[] {  });
+            Assert.Equal(new List<int> {  }, result);
+            
+            result = conclusion.FindDisappearedNumbers(new int[] { 1,1 });
+            Assert.Equal(new List<int> { 2 }, result);
 
         }
     }
