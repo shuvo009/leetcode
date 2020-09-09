@@ -22,7 +22,7 @@ namespace leetcode.learn.LinkedList
             node4.next = node5;
             
             var nthFromEnd = removeNthNodeFromEndOfList.RemoveNthFromEnd(node1, 2);
-            Assert.Equal("1235", stringGetValues(nthFromEnd));
+            Assert.Equal("1235", Helper.StringGetValues(nthFromEnd));
         }
 
         [Fact]
@@ -33,7 +33,7 @@ namespace leetcode.learn.LinkedList
             var node1 = new ListNode(1);
             
             var nthFromEnd = removeNthNodeFromEndOfList.RemoveNthFromEnd(node1, 1);
-            Assert.Equal("", stringGetValues(nthFromEnd));
+            Assert.Equal("", Helper.StringGetValues(nthFromEnd));
         }
         
         [Fact]
@@ -46,23 +46,7 @@ namespace leetcode.learn.LinkedList
             node1.next = node2;
             
             var nthFromEnd = removeNthNodeFromEndOfList.RemoveNthFromEnd(node1, 1);
-            Assert.Equal("1", stringGetValues(nthFromEnd));
-        }
-
-        private string stringGetValues(ListNode listNode)
-        {
-            if (listNode == null)
-                return "";
-
-            var currentNode = listNode;
-            var sb = new StringBuilder();
-            while (currentNode != null)
-            {
-                sb.Append(currentNode.val);
-                currentNode = currentNode.next;
-            }
-
-            return sb.ToString();
+            Assert.Equal("1", Helper.StringGetValues(nthFromEnd));
         }
 
         [Fact]
@@ -82,7 +66,7 @@ namespace leetcode.learn.LinkedList
             node4.next = node5;
 
             var nthFromEnd = removeNthNodeFromEndOfList.RemoveNthFromEnd(node1, 1);
-            Assert.Equal("1234", stringGetValues(nthFromEnd));
+            Assert.Equal("1234", Helper.StringGetValues(nthFromEnd));
         }
     }
 }
